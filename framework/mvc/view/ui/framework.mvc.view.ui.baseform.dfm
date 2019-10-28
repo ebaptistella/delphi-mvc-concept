@@ -1,0 +1,21 @@
+object BaseFormView: TBaseFormView
+  Left = 0
+  Top = 0
+  Caption = 'BaseFormView'
+  ClientHeight = 289
+  ClientWidth = 521
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+end
