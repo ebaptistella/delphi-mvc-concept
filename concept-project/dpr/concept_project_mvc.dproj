@@ -240,7 +240,6 @@
                     <Source Name="MainSource">concept_project_mvc.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="D:\dsv-git\dsv-delphi\framework\componentes\sysmo\bin\Delphi 10\Win32\SysmoFastReport_10.bpl">Sysmo - FastReport</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp230.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
