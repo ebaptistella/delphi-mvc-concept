@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D18988AE-839E-4292-BEEC-547E98F0D572}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\concept-project\dpr\concept_project_mvc.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\framework\libraries\validation\test\dpr\validationtest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="concept_project_mvc">
+        <MSBuild Projects="..\concept-project\dpr\concept_project_mvc.dproj"/>
+    </Target>
+    <Target Name="concept_project_mvc:Clean">
+        <MSBuild Projects="..\concept-project\dpr\concept_project_mvc.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="concept_project_mvc:Make">
+        <MSBuild Projects="..\concept-project\dpr\concept_project_mvc.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="validationtest">
+        <MSBuild Projects="..\framework\libraries\validation\test\dpr\validationtest.dproj"/>
+    </Target>
+    <Target Name="validationtest:Clean">
+        <MSBuild Projects="..\framework\libraries\validation\test\dpr\validationtest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="validationtest:Make">
+        <MSBuild Projects="..\framework\libraries\validation\test\dpr\validationtest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="concept_project_mvc;validationtest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="concept_project_mvc:Clean;validationtest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="concept_project_mvc:Make;validationtest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
