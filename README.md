@@ -12,8 +12,11 @@ For execute this project you need:
   - Delphi-OOP `git clone https://github.com/azzazello/delphi-oop.git`
 
 > For *spring4d* prefer the tag *1.2.1*
+
 > For *DSharp* prefer the branch *spring-1.2.1*
+
 > And for *Delphi-OOP* the *master* branch
+
 
 # For runing project
 
